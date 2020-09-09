@@ -143,6 +143,7 @@ GridSearch was implmented to optimize parameters for Decision Tree & Random Fore
 
 
 ## Technologies/Packages Used
+  * Google Cloud Platform
   * Jupyter Notebook
   * Python
   * pandas
