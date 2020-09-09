@@ -161,6 +161,7 @@ GridSearch was implmented to optimize parameters for Decision Tree & Random Fore
 ## Presentation Materials Used
   * Slidesgo - Template
   * freepik - Photos
+  * mapchart.net - US Maps
 
 
 *Centers for Disease Control and Prevention, National Center for Health Statistics. Underlying Cause of Death, 1999–2017. CDC WONDER Online Database. Atlanta, GA: Centers for Disease Control and Prevention; 2018. Accessed January 7, 2019.
