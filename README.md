@@ -26,7 +26,7 @@ Using classification modeling techniques, identify what ‘evergreen’ external
 Additional analysis will be then be done to determine if COVID-related lockdown rules reduced frequency of accidents in general, looking state by state as their rules varied across the nation.
 
 ### Approach
-To reach this project’s objectives, traffic data on car accidents from February 2016 to June 2020 across the US (~3.5M accidents) was collected and combined data on when states (if ever) implemented ‘stay-at-home’ orders for citizens and then also when they (if yet) reopened the state.
+To reach this project’s goals, traffic data on car accidents from February 2016 to June 2020 across the US (~3.5M accidents) was collected and combined data on when states (if ever) implemented ‘stay-at-home’ orders for citizens and then also when they (if yet) reopened the state.
 
 Classification modeling was used to determine if the ‘severity’ of an accident can be predicted with an understanding of the ‘evergreen’ external factors, and then also look at the period of COVID across states to see how it may have affected frequency and/or severity of accidents.
 
