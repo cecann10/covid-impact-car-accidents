@@ -28,11 +28,14 @@ Additional analysis will be then be done to determine if COVID-related lockdown 
 ### Approach
 To reach this project’s goals, traffic data on car accidents from February 2016 to June 2020 across the US (~3.5M accidents) was collected and combined data on when states (if ever) implemented ‘stay-at-home’ orders for citizens and then also when they (if yet) reopened the state.
 
-Classification modeling was used to determine if the ‘severity’ of an accident can be predicted with an understanding of the ‘evergreen’ external factors, and then also look at the period of COVID across states to see how it may have affected frequency and/or severity of accidents.
+Then 20 states with the most car accidents (=86% of total car accidents in US) were examined for changes in severity or frequency by comparing each states unique stay-home period with equivalent periods in 2017-2019.
+
+To get an understanding of the *degree* of impact the stay-home period had on severity of car accidents in 2020, classification modeling was used by combining 26 'evergreen' variables -- such as weather condition, road signs' presence, time of day -- and added whether stay-home period was in place during time of accident to see if the stay-home variable affected the model, and if so, in a Logistic Regression model which 'direction' it pulled the model by its coefficient either being positive (more severe accident) or negative (less severe car accident).
 
 
 ### Findings
 Multiple featues were considered for the classifcation modeling:
+- Whether in a stay-home period
 - Temperature (F)
 - Humidity(%)
 - Visibility(mi)
@@ -42,15 +45,12 @@ Multiple featues were considered for the classifcation modeling:
 - Presence of traffic signs/guides (e.g. Traffic Signal, Roundabout, No Exit)
 - Time of Day (Day or Night)
 
+XGBoost, Random Forest, and Logistic Regression models were tested and appeared to have relatively similiar ressults.  For this projects' goal the accuracy of the model needed to be strong to trust results, but the model itself was not intended to be used to predict a car accident and was instead being used to evaluate the impact of the stay-home period on the model.  With this all in mind, the Logistic Regression model with 71.6% accuracy was selected because unlike the other models, Logistic Regression models can tell us which direction each variable is 'pulling' the model -- and this model found that the stay-home period did improve the model's accuracy very slightly (0.002) and 
 
 Final features of the model were:
 - XXX
 - XXX
 - XXX
-
-A logistic Regression model leveraging oversampling for the 'positive' class (= high blood pressure) was found to be the best option between various classification models considered (Logistic Regression, Random Forest, and Decision Tree).  All models had similiar performance numbers, but the Linear Regression model selected could be a a higher threshold than the others while retaining high recall.  The model's resulting features were also easy to interpret and apply for individuals.
-
-This model's main metric of performance was **Recall**, as it was determined that it was important to catch more people that could have high blood pressure (i.e. lower number False Negatives) vs. looking more to Precision where there would be risk of missing some people that did have high blood pressure (i.e. lower number False Positives).
 
 With scaled data, formula for the model is:
 
