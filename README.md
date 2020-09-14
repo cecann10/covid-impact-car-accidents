@@ -168,7 +168,6 @@ For classification modeling, Logistic Regression, XGBoost, and Random Forest mod
   * seaborn
   * sklearn
   * matplotlib
-  * yellowbrick
   * mlxtend
 
 
