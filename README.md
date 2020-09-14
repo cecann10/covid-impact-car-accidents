@@ -32,8 +32,17 @@ Then 20 states with the most car accidents (=86% of total car accidents in US) w
 
 To get an understanding of the *degree* of impact the stay-home period had on severity of car accidents in 2020, classification modeling was used by combining 26 'evergreen' variables -- such as weather condition, road signs' presence, time of day -- and added whether stay-home period was in place during time of accident to see if the stay-home variable affected the model, and if so, in a Logistic Regression model which 'direction' it pulled the model by its coefficient either being positive (more severe accident) or negative (less severe car accident).
 
+Severity of a car accident was ranked in four categories:
+- Low
+- Medium Low
+- Medium High
+- High
+
 
 ### Findings
+
+**Classification Modeling:**
+
 Multiple featues were considered for the classifcation modeling:
 - Whether in a stay-home period
 - Temperature (F)
@@ -45,18 +54,37 @@ Multiple featues were considered for the classifcation modeling:
 - Presence of traffic signs/guides (e.g. Traffic Signal, Roundabout, No Exit)
 - Time of Day (Day or Night)
 
-XGBoost, Random Forest, and Logistic Regression models were tested and appeared to have relatively similiar ressults.  For this projects' goal the accuracy of the model needed to be strong to trust results, but the model itself was not intended to be used to predict a car accident and was instead being used to evaluate the impact of the stay-home period on the model.  With this all in mind, the Logistic Regression model with 71.6% accuracy was selected because unlike the other models, Logistic Regression models can tell us which direction each variable is 'pulling' the model -- and this model found that the stay-home period did improve the model's accuracy very slightly (0.002) and
+XGBoost, Random Forest, and Logistic Regression models were tested and appeared to have relatively similiar ressults.  For this projects' goal the accuracy of the model needed to be strong to trust results, but the model itself was not intended to be used to predict a car accident and was instead being used to evaluate the impact of the stay-home period on the model.  With this all in mind, the Logistic Regression model with 71.6% accuracy was selected because unlike the other models, Logistic Regression models can tell us which direction each variable is 'pulling' the model -- and this model found that the stay-home period did improve the model's accuracy slightly (0.002) towards the direction of the car accident being less severe.
 
-Final features of the model were:
-- XXX
-- XXX
-- XXX
+Variables leaning towards predicting less severe car accidents:
+- Weather Conditions:
+  - Clear/Fair
+  - Foggy/Hazy
+- Signal Presence:
+  - Traffic Light
+- Intersection Type:
+  - Crossing
+- **Under 'Stay-Home' Orders**
 
-With scaled data, formula for the model is:
+Variables leaning towards predicting more severe car accidents:
+- Weather Conditions:
+  - Rain/Thunderstorm
+  - Snow/Hail
+- Time of Day:
+  - Nighttime
+- Intersection Type:
+  - Junction
+- Higher Temperature Outside
 
-Yp  =  -0.121 + 0.887(x1) + 0.340(x2) + 0.139(x3) + 0.152(x4) - 0.005(x5)
+-----
+**States'Severity and Frequency Analysis:**
 
-Accuracy score for this model was: **71.6%**
+When examining the top 20 states with most accidents together, it found a:
+- 8,870% ‘Low Severity’ increase in 2020 stay-home period compared to average 2017 – 2019 equivalent periods
+- 52% increase in car accidents during 2020 stay-home period compared to average 2017 – 2019 equivalent periods
+
+When examining individual states, while in the majority of cases trends of low severity of car accidents and higher frequency of car accidents was seen, there was great variation between states in the degree of that change (or in some cases, an opposite direction).
+
 
 
 ### Conclusion
@@ -150,8 +178,3 @@ GridSearch was implmented to optimize parameters for Decision Tree & Random Fore
   * Slidesgo - Template
   * freepik - Photos
   * mapchart.net - US Maps
-
-
-*Centers for Disease Control and Prevention, National Center for Health Statistics. Underlying Cause of Death, 1999–2017. CDC WONDER Online Database. Atlanta, GA: Centers for Disease Control and Prevention; 2018. Accessed January 7, 2019.
-
-** Kirkland EB, Heincelman M, Bishu KG, et. al. Trends in healthcare expenditures among US adults with hypertension: national estimates, 2003-2014. J Am Heart Assoc. 2018;7:e008731.
