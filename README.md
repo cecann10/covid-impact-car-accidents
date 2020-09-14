@@ -56,22 +56,11 @@ With scaled data, formula for the model is:
 
 Yp  =  -0.121 + 0.887(x1) + 0.340(x2) + 0.139(x3) + 0.152(x4) - 0.005(x5)
 
-Threshold was set at 0.34, resulting in:
-
-- **Accuarcy score: 0.XX**
-- Precision: 0.XX
-- Recall: 0.XX
-- F1 Score: 0.XX
-- ROC AUC Score: 0.XX
+Accuracy score for this model was: **71.6%**
 
 
 ### Conclusion
-The model demonstrates a relationship between an individual having high blood pressure to their age, weight, race, alcohol consumption, and smoking of cigarettes.
-
-Age is the most significant of indicators of high blood pressure, followed by weight, then race, alcohol consumption, and cigarette smoking.
-
-
-The model indicates that a person is more likely to have high blood pressure as their age, weight, and alcohol consumption increases.  And also if they currently smoke and idenify as of the race of Non-Hispanic Black.
+The findings of this project indicate that during the stay-home period in the US, there was an increase of frequency of car accidents and a decrease of severity of car accidents, even when accounting for other ‘evergreen’ variables, such as weather and time of day.  Additionally, individual states can vary significantly in degree shifts in frequency and severity.
 
 
 
