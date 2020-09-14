@@ -124,14 +124,14 @@ For classification modeling, Logistic Regression, XGBoost, and Random Forest mod
 
 
 ## DATA & FILE OVERVIEW
-*Note all notebooks were originally run and developed from Google Cloud Platform)*
+*Note all notebooks were originally run and developed from Google Cloud Platform*
 
 - **File List**:
     * [Data Collection & EDA](modeling_and_analysis/car_accidents_eda.ipynb) - worksheet for pulling in all car accident and stay-at-home by state data.  Then data was combined to master document, filtered to key features, and cleaned.
 
-    * [Model Development](modeling_and_analysis/nhanes_bp_model.ipynb) - worksheet where car accident severity classification models were explored, developed, analyzed, and refined.
+    * [Model Development](modeling_and_analysis/car_accidents_model.ipynb) - worksheet where car accident severity classification models were explored, developed, analyzed, and refined.
 
-    * [Analysis](modeling_and_analysis/nhanes_bp_model.ipynb) - worksheet where car accident severity and frequency was analyzed for the top 20 states with the most car accidents (=86% of total US car accidents)
+    * [Analysis](modeling_and_analysis/accident_covid_analysis.ipynb) - worksheet where car accident severity and frequency was analyzed for the top 20 states with the most car accidents (representing 86% of total US car accidents)
 
     * [CSVs](modeling_and_analysis/csv) - the originl csv used for collection of raw data on car accidents
 
