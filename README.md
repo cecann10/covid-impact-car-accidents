@@ -23,7 +23,7 @@ With the spread of COVID and cities and states ‘locking down’ across the cou
 
 Using classification modeling techniques, identify what ‘evergreen’ external factors (geography, weather conditions, traffic signals in the area, etc.) have a relationship with the level of severity of an accident and also examine whether the ‘new’ external factor of the COVID-related lockdown rules slowed traffic in states has a relationship with the severity of an accident.
 
-Additional analysis will be then be done to determine if COVID-related lockdown rules reduced frequency of accidents in general, looking state by state as their rules varied across the nation.
+Conduct additonal analysis to determine if COVID-related lockdown rules reduced frequency of accidents in general, looking state by state since periods of stay-home varied across the nation.
 
 ### Approach
 To reach this project’s goals, traffic data on car accidents from February 2016 to June 2020 across the US (~3.5M accidents) was collected and combined data on when states (if ever) implemented ‘stay-at-home’ orders for citizens and then also when they (if yet) reopened the state.
@@ -54,9 +54,9 @@ Multiple featues were considered for the classifcation modeling:
 - Presence of traffic signs/guides (e.g. Traffic Signal, Roundabout, No Exit)
 - Time of Day (Day or Night)
 
-XGBoost, Random Forest, and Logistic Regression models were tested and appeared to have relatively similiar ressults.  For this projects' goal the accuracy of the model needed to be strong to trust results, but the model itself was not intended to be used to predict a car accident and was instead being used to evaluate the impact of the stay-home period on the model.  With this all in mind, the Logistic Regression model with 71.6% accuracy was selected because unlike the other models, Logistic Regression models can tell us which direction each variable is 'pulling' the model -- and this model found that the stay-home period did improve the model's accuracy slightly (0.002) towards the direction of the car accident being less severe.
+The Logistic Regression model focusing on 2020 car accidents with 71.6% accuracy was selected and found that the stay-home period did improve the model's accuracy slightly (0.002) towards the direction of the car accident being less severe.
 
-Variables leaning towards predicting less severe car accidents:
+*Variables leaning towards predicting less severe car accidents:*
 - Weather Conditions:
   - Clear/Fair
   - Foggy/Hazy
@@ -66,7 +66,7 @@ Variables leaning towards predicting less severe car accidents:
   - Crossing
 - **Under 'Stay-Home' Orders**
 
-Variables leaning towards predicting more severe car accidents:
+*Variables leaning towards predicting more severe car accidents:*
 - Weather Conditions:
   - Rain/Thunderstorm
   - Snow/Hail
@@ -83,7 +83,7 @@ When examining the top 20 states with most accidents together, it found a:
 - 8,870% ‘Low Severity’ increase in 2020 stay-home period compared to average 2017 – 2019 equivalent periods
 - 52% increase in car accidents during 2020 stay-home period compared to average 2017 – 2019 equivalent periods
 
-When examining individual states, while in the majority of cases trends of low severity of car accidents and higher frequency of car accidents was seen, there was great variation between states in the degree of that change (or in some cases, an opposite direction).
+When examining individual states, while in the majority of states trend with the average low severity of car accidents and higher frequency of car accidents, there was great variation between states in the *degree* of that change -- or in a few cases, an opposite direction.  For example, California had a car accident *increase* of 76% during the stay-home 2020 period vs. its 2017-2019 average, while Texas had a *decrease* of 37%.
 
 
 
