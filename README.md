@@ -45,7 +45,7 @@ Multiple featues were considered for the classifcation modeling:
 - Presence of traffic signs/guides (e.g. Traffic Signal, Roundabout, No Exit)
 - Time of Day (Day or Night)
 
-XGBoost, Random Forest, and Logistic Regression models were tested and appeared to have relatively similiar ressults.  For this projects' goal the accuracy of the model needed to be strong to trust results, but the model itself was not intended to be used to predict a car accident and was instead being used to evaluate the impact of the stay-home period on the model.  With this all in mind, the Logistic Regression model with 71.6% accuracy was selected because unlike the other models, Logistic Regression models can tell us which direction each variable is 'pulling' the model -- and this model found that the stay-home period did improve the model's accuracy very slightly (0.002) and 
+XGBoost, Random Forest, and Logistic Regression models were tested and appeared to have relatively similiar ressults.  For this projects' goal the accuracy of the model needed to be strong to trust results, but the model itself was not intended to be used to predict a car accident and was instead being used to evaluate the impact of the stay-home period on the model.  With this all in mind, the Logistic Regression model with 71.6% accuracy was selected because unlike the other models, Logistic Regression models can tell us which direction each variable is 'pulling' the model -- and this model found that the stay-home period did improve the model's accuracy very slightly (0.002) and
 
 Final features of the model were:
 - XXX
@@ -112,27 +112,26 @@ GridSearch was implmented to optimize parameters for Decision Tree & Random Fore
 *Note all notebooks were originally run and developed from Google Cloud Platform)*
 
 - **File List**:
-    * [Data Collection & EDA](data_and_modeling/car_accidents_eda.ipynb) - worksheet for pulling in all car accident and stay-at-home by state data.  Then data was combined to master document, filtered to key features, and cleaned.
+    * [Data Collection & EDA](modeling_and_analysis/car_accidents_eda.ipynb) - worksheet for pulling in all car accident and stay-at-home by state data.  Then data was combined to master document, filtered to key features, and cleaned.
 
-    * [Exploratory Data Analysis & Model Development](data_and_modeling/nhanes_bp_model.ipynb) - worksheet where exploratory data analysis and classification models were explored, developed, analyzed, and refined.
+    * [Model Development](modeling_and_analysis/nhanes_bp_model.ipynb) - worksheet where car accident severity classification models were explored, developed, analyzed, and refined.
 
-    * [CSVs](data_and_modeling/csv) - the originl csv used for collection of raw data on car accidents
+    * [Analysis](modeling_and_analysis/nhanes_bp_model.ipynb) - worksheet where car accident severity and frequency was analyzed for the top 20 states with the most car accidents (=86% of total US car accidents)
 
-    * [Images](data_and_modeling/images) - images of key graphs made in data collection and modeling process
+    * [CSVs](modeling_and_analysis/csv) - the originl csv used for collection of raw data on car accidents
 
 - **Relationship between files**:
-    * Files listed above are in order of collection and build from each other, but pickles have been made so that each file can be pulled independent of the other.  All pickles can be found in the [`data_and_modeling/pickles` folder](data_and_modeling/data/pickles)
+    * Files listed above are in order of collection and build from each other.  Pickles were removed from the folders due to file-size restrictions, but if notebooks are run, pickles will appear and then each notebook will be able to run independent of the other.
 
 - **Presentation Deck**:
-    * [PDF version](Presentation/Presentation_PDF.zip)
-    * [Google Slides version]('XXX')
-    * [PPT version](Presentation/Presentation_PPT.zip)
+    * [PDF version](presentation/COVID_Car_Accidents_Presentation.pdf)
+    * [PPT version](presentation/COVID_Car_Accidents_Presentation.pptx.zip)
 
 ## SHARING/ACCESS INFORMATION
 
  - Licenses/restrictions placed on the data: This car accident dataset has been distributed only for Research purposes, under Creative Commons Attribution-Noncommercial-ShareAlike license (CC BY-NC-SA 4.0). You are not allowed to directly download data from this file; go to [Kaggle.com]('https://www.kaggle.com/sobhanmoosavi/us-accidents') to collect data and follow their usage guidelines.
 
- - Recommended citation for this dataset:
+ - **Recommended citation for this dataset:**
 - Car Accident data:
     - Moosavi, Sobhan, Mohammad Hossein Samavatian, Srinivasan Parthasarathy, and Rajiv Ramnath. “A Countrywide Traffic Accident Dataset.”, 2019.
     -   Moosavi, Sobhan, Mohammad Hossein Samavatian, Srinivasan Parthasarathy, Radu Teodorescu, and Rajiv Ramnath. "Accident Risk Prediction based on Heterogeneous Sparse Data: New Dataset and Insights." In proceedings of the 27th ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems, ACM, 2019.
