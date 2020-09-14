@@ -83,7 +83,7 @@ When examining the top 20 states with most accidents together, it found a:
 - 8,870% ‘Low Severity’ increase in 2020 stay-home period compared to average 2017 – 2019 equivalent periods
 - 52% increase in car accidents during 2020 stay-home period compared to average 2017 – 2019 equivalent periods
 
-When examining individual states, while in the majority of states trend with the average low severity of car accidents and higher frequency of car accidents, there was great variation between states in the *degree* of that change -- or in a few cases, an opposite direction.  For example, California had a car accident *increase* of 76% during the stay-home 2020 period vs. its 2017-2019 average, while Texas had a *decrease* of 37%.
+When examining individual states, while in the majority of states trend with the average low severity of car accidents and higher frequency of car accidents, there was great variation between states in the *degree* of that change -- or in a few cases, an opposite direction.  For example, California had a car accident frequency *increase* of 76% during the stay-home 2020 period vs. its 2017-2019 average, while Texas had a *decrease* of 37%.
 
 
 
@@ -118,11 +118,9 @@ For the classificaion modeling, the target variable, Severity of Car Accident, o
 
 
 #### Methods for analysis and modeling:
-For classification modeling, Logistic Regression, Decision Tree, and Random Forest models were all tested and compared.
+For classification modeling, Logistic Regression, XGBoost, and Random Forest models were all tested and compared.
 
 'Dummies' were created for categorical data were needed and data was scaled for Logistic Regression modeling.  Common methods were used for address imbalance of the classes (undersampling, ADASYN), but utlimately did not improve the model and were therefore not used.
-
-GridSearch was implmented to optimize parameters for Decision Tree & Random Forest models.  Thresholds were considered to best meet target metric of recall performance without too great of sacrifice to other metrics of precision, F1 score, and accuracy.
 
 
 ## DATA & FILE OVERVIEW
