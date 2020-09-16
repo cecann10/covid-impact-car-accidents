@@ -140,7 +140,7 @@ For classification modeling, Logistic Regression, XGBoost, and Random Forest mod
 
 - **Presentation Deck**:
     * [PDF version](presentation/COVID_Car_Accidents_Presentation.pdf)
-    * [PPT version](presentation/COVID_Car_Accidents_Presentation.pptx.zip)
+    * [Video Presentation](presentation/CelinaPlaza_Metis_Project5.mp4)
 
 ## SHARING/ACCESS INFORMATION
 
